@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
 
 
 
@@ -185,30 +185,41 @@ import ReactDOM from 'react-dom/client';
 
 
 // choldren
-const Profile = ({ name, email }) => (
-  <div>
-    <p>Name: {name}</p>
-    <p>Email: {email}</p>
-  </div>
-);
+// const Profile = ({ name, email }) => (
+//   <div>
+//     <p>Name: {name}</p>
+//     <p>Email: {email}</p>
+//   </div>
+// );
 
-const Panel = ({ title, children }) => (
-    <section>
-        {children}
-        <h2>{title}</h2>
-        {children}
-    </section>
-)
+// const Panel = ({ title, children }) => (
+//     <section>
+//         {children}
+//         <h2>{title}</h2>
+//         {children}
+//     </section>
+// )
 
-const App = () => (
-  <div>
-    <Panel title="User profile">
-      <Profile name="David" email="david@gmail.com" />
-      <Profile name="Dana" email="dana@gmail.com" />
-    </Panel>
-  </div>
-);
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+// const App = () => (
+//   <div>
+//     <Panel title="User profile">
+//       <Profile name="David" email="david@gmail.com" />
+//       <Profile name="Dana" email="dana@gmail.com" />
+//     </Panel>
+//   </div>
+// );
+// ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 
 //propTypes​ 09.06
+
+
+
+
+
+import React from 'react';
+import App from './App';
+import ReactDOM from "react-dom/client";
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
