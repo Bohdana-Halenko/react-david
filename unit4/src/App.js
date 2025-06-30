@@ -25,9 +25,9 @@ import { Alert } from './Alert';
 const App = () => {
     return (
       <>
-        <Alert variant="warning">Please update your email!</Alert>
-        <Alert variant="error">Error!</Alert>
-        <Alert variant='success'>Payment received, thank you!</Alert>
+        <Alert className="alert warning">Please update your email!</Alert>
+        <Alert className="alert error">Error!</Alert>
+        <Alert className="alert success">Payment received, thank you!</Alert>
       </>
     );
 }
