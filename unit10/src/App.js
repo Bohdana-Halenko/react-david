@@ -56,28 +56,63 @@
 
 
 
-import React, {Component} from 'react';
+// import React, {Component} from 'react';
 
 
-class App extends Component {
-  state={
-    inputValue: "",
-  }
+// class App extends Component {
+//   state={
+//     inputValue: "",
+//   }
 
-  handleChange = e =>{
-    this.setState({inputValue: e.target.value})
-  }
+//   handleChange = e =>{
+//     this.setState({inputValue: e.target.value})
+//   }
+
+//   render(){
+//     const {inputValue} = this.state;
+
+//     return(
+//       <div>
+//         <input type="text" placeholder='Your text' value = {inputValue} onChange={this.handleChange}/>
+//         <p>Ви ввели: {inputValue}</p>
+//       </div>
+//     )
+//   }
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from "react";
+import {nanoid} from 'nanoid';
+
+class Form extends React.Component{
+  loginInputId = nanoid();
 
   render(){
-    const {inputValue} = this.state;
-
     return(
-      <div>
-        <input type="text" placeholder='Your text' value = {inputValue} onChange={this.handleChange}/>
-        <p>Ви ввели: {inputValue}</p>
-      </div>
+      <form>
+        <label htmlFor={this.loginInputId}>Login</label>
+        <input 
+        type="text"
+        name='login'
+        id={this.loginInputId}
+        placeholder='Enter login'
+/>
+      </form>
     )
   }
 }
 
-export default App;
+export default Form;
