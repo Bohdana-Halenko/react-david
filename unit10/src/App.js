@@ -94,25 +94,52 @@
 
 
 
-import React from "react";
-import {nanoid} from 'nanoid';
+// import React from "react";
+// import {nanoid} from 'nanoid';
 
-class Form extends React.Component{
-  loginInputId = nanoid();
+// class Form extends React.Component{
+//   loginInputId = nanoid();
 
-  render(){
-    return(
-      <form>
-        <label htmlFor={this.loginInputId}>Login</label>
-        <input 
-        type="text"
-        name='login'
-        id={this.loginInputId}
-        placeholder='Enter login'
-/>
-      </form>
-    )
-  }
-}
+//   render(){
+//     return(
+//       <form>
+//         <label htmlFor={this.loginInputId}>Login</label>
+//         <input 
+//         type="text"
+//         name='login'
+//         id={this.loginInputId}
+//         placeholder='Enter login'
+// />
+//       </form>
+//     )
+//   }
+// }
 
-export default Form;
+// export default Form;
+
+
+
+
+
+
+
+
+
+
+
+
+// class Error extends React.Component{
+//   state = {hasError: false,}
+
+//   componentDidCatch(error, info){
+//     this.setState({hasError: true})
+//   }
+
+//   render(){
+//     if(this.state.hasError){
+//       return <p>Упс... Помилка!</p>
+//     }
+
+//     return this.props.children
+//   }
+// }
