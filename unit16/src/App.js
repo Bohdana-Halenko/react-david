@@ -114,50 +114,50 @@
 
 
 
-import {useState, useEffect} from 'react';
+// import {useState, useEffect} from 'react';
 
-const App =({username})=>{
-const [isLog, setIsLog] = useState(false);
-const [value, setValue] = useState('');
+// const App =({username})=>{
+// const [isLog, setIsLog] = useState(false);
+// const [value, setValue] = useState('');
 
-useEffect(()=>{
-  console.log("First message")
-}, []);
+// useEffect(()=>{
+//   console.log("First message")
+// }, []);
 
-useEffect(()=>{
-  if(username){
-    console.log('Fetching user: ', username)
-  }
-}, [username]);
+// useEffect(()=>{
+//   if(username){
+//     console.log('Fetching user: ', username)
+//   }
+// }, [username]);
 
-useEffect(()=>{
-  console.log("Value changed: ", value)
-}, [value]);
+// useEffect(()=>{
+//   console.log("Value changed: ", value)
+// }, [value]);
 
-useEffect(()=>{
-  console.log("isLog changed: ", isLog)
-}, [isLog]);
+// useEffect(()=>{
+//   console.log("isLog changed: ", isLog)
+// }, [isLog]);
 
-useEffect(()=>{
-  const handleKeyDown = e => console.log('keydown event: ', e.key);
-  document.addEventListener('keydown', handleKeyDown);
+// useEffect(()=>{
+//   const handleKeyDown = e => console.log('keydown event: ', e.key);
+//   document.addEventListener('keydown', handleKeyDown);
 
-  return () => {
-    document.removeEventListener('keydown', handleKeyDown)
-  }
-}, []);
-
-
-return(
-  <div>
-    <h1>Hello {username}</h1>
-    <p>Value: {value}</p>
-    <input type="text" value = {value} onChange={e => setValue(e.target.value)}/>
-    <p>Status: {isLog ? "Logged in" : "Logged out"}</p>
-    <button onClick={()=>setIsLog(prev => !prev)}>Toggle Login</button>
-  </div>
-)
-}
+//   return () => {
+//     document.removeEventListener('keydown', handleKeyDown)
+//   }
+// }, []);
 
 
-export default App;
+// return(
+//   <div>
+//     <h1>Hello {username}</h1>
+//     <p>Value: {value}</p>
+//     <input type="text" value = {value} onChange={e => setValue(e.target.value)}/>
+//     <p>Status: {isLog ? "Logged in" : "Logged out"}</p>
+//     <button onClick={()=>setIsLog(prev => !prev)}>Toggle Login</button>
+//   </div>
+// )
+// }
+
+
+// export default App;
