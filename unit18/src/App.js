@@ -113,26 +113,73 @@
 // export default App;
 
 
-import { useRef } from "react";
+// import { useRef } from "react";
 
-const Player = ({source}) => {
-  const playerRef = useRef(null);
-  const play = () => playerRef.current.play();
-  const pause = () => playerRef.current.pause();
+// const Player = ({source}) => {
+//   const playerRef = useRef(null);
+//   const play = () => playerRef.current.play();
+//   const pause = () => playerRef.current.pause();
 
-  return (
-    <div>
-      <video ref={playerRef} src={source}>Sorry, we have a problem</video>
-      <div>
-        <button onClick = {play}>Play</button>
-        <button onClick={pause}>Pause</button>
-      </div>
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       <video ref={playerRef} src={source}>Sorry, we have a problem</video>
+//       <div>
+//         <button onClick = {play}>Play</button>
+//         <button onClick={pause}>Pause</button>
+//       </div>
+//     </div>
+//   )
+// }
 
-const App = () => {
-  return <Player source="http://media.w3.org/2010/05/sintel/trailer.mp4"/>
+// const App = () => {
+//   return <Player source="http://media.w3.org/2010/05/sintel/trailer.mp4"/>
+// }
+
+// export default App;
+
+
+
+
+
+
+// useMemo
+
+// const memoValue = React.useMemo(() => computeExpensiveValue(a,b), [a, b])
+
+// import {useState, useMemo} from 'react';
+
+// const App = ({someProp}) => {
+//   const [planets, setPlanets] = useState(['Earth', "Mars", "Venus", "Jupiter"]);
+//   const [query, setQuery] = useState("");
+//   const [clicks, setClicks] = useState(0);
+
+
+//   const filteredPlanets = useMemo(()=>planets.filter(planet => planet.includes(query)), [planets, query])
+
+//   return(
+//     <div>
+//       <div>Some props: {someProp}</div>
+//       <button onClick ={()=>setClicks(clicks+1)}>Numbers of click: {clicks}</button>
+//       <div>
+//       {filteredPlanets.map(planet => (
+//         <div key={planet}>{planet}</div>
+//       ))}
+//     </div>
+//     </div>
+    
+//   )
+// }
+
+// export default App;
+
+
+// useMemo, useCallback практика (п.3)
+import React, {useState, useMemo, useCallback} from 'react;'
+
+function App(){
+  const [numbers, setNumbers] = useState([1, 2, 3]);
+  const [input, setInput] = useState('');
+  const [filter, setFilter] = useState('');
 }
 
 export default App;
