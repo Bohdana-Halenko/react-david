@@ -54,10 +54,6 @@
 //   );
 // }
 
-
-
-
-
 // useRef
 
 // import {useRef} from "react";
@@ -67,7 +63,6 @@
 
 //   return <button ref={btnRef}>Button with ref</button>
 // }
-
 
 // import {useEffect, useRef, useState} from "react";
 
@@ -95,7 +90,6 @@
 
 // export default App;
 
-
 // const App = () =>{
 //   const valueRef = useRef(0);
 
@@ -111,7 +105,6 @@
 // };
 
 // export default App;
-
 
 // import { useRef } from "react";
 
@@ -137,11 +130,6 @@
 
 // export default App;
 
-
-
-
-
-
 // useMemo
 
 // const memoValue = React.useMemo(() => computeExpensiveValue(a,b), [a, b])
@@ -152,7 +140,6 @@
 //   const [planets, setPlanets] = useState(['Earth', "Mars", "Venus", "Jupiter"]);
 //   const [query, setQuery] = useState("");
 //   const [clicks, setClicks] = useState(0);
-
 
 //   const filteredPlanets = useMemo(()=>planets.filter(planet => planet.includes(query)), [planets, query])
 
@@ -166,20 +153,32 @@
 //       ))}
 //     </div>
 //     </div>
-    
+
 //   )
 // }
 
 // export default App;
 
-
 // useMemo, useCallback практика (п.3)
-import React, {useState, useMemo, useCallback} from 'react;'
+// import React, {useState, useMemo, useCallback} from 'react;'
 
-function App(){
-  const [numbers, setNumbers] = useState([1, 2, 3]);
-  const [input, setInput] = useState('');
-  const [filter, setFilter] = useState('');
-}
+// function App(){
+//   const [numbers, setNumbers] = useState([1, 2, 3]);
+//   const [input, setInput] = useState('');
+//   const [filter, setFilter] = useState('');
+// }
 
-export default App;
+// export default App;
+
+
+
+
+import {Route, Routes} from "react-router-dom";
+
+
+<Routes>
+  <Route path="/about" element={<About />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/about" element={<About />} />
+</Routes>;
