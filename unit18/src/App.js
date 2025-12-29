@@ -170,15 +170,50 @@
 
 // export default App;
 
+// import {Route, Routes} from "react-router-dom";
+
+// <Routes>
+//   <Route path="/about" element={<About />} />
+//   <Route path="/about" element={<About />} />
+//   <Route path="/about" element={<About />} />
+//   <Route path="/about" element={<About />} />
+// </Routes>;
+
+// 29.12
+
+// import { Route, Routes, NavLink, Link } from "react-router-dom";
+// import Home from "path/Home";
+// import About from "path/About";
+// import Products from "path/Products";
+// import NotFound from "path/NotFound";
+// import ProductDetails from "path/ProductDetails"
+
+// export const App = () => {
+//   return (
+//     <div>
+//       <NavLink>
+//         <Link to="/">Home</Link>
+//         <Link to="/about">About</Link>
+//         <Link to="/products">Products</Link>
+//       </NavLink>
+
+//       <Routes>
+//         <Route path="/" element={<Home/>}/>
+//         <Route path="/about" element={<About/>}/>
+//         <Route path="/products" element={<Products/>}/>
+//         <Route path="/products/:productId" element={<ProductDetails/>}/>
+//         <Route path="*" element={<NotFound/>}/>
+//       </Routes>
+//     </div>
+//   );
+// };
 
 
 
-import {Route, Routes} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-
-<Routes>
-  <Route path="/about" element={<About />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/about" element={<About />} />
-</Routes>;
+const ProductDetails = () =>{
+  const {productId} = useParams();
+  return(
+    )
+}
