@@ -236,8 +236,6 @@
 //     </div>)
 // };
 
-
-
 // import {Navigate, useState} from "react-router-dom";
 
 // export const Login = () =>{
@@ -258,4 +256,54 @@
 //       </div>)
 // }
 
-// https://gomerch.it/products?name=hoodie&color=orange&maxPrice=500
+// https://gomerch.it/products?name=hoodie&color=orange&maxPrice=500#agreeement
+
+// 12.01.2026 Тема 28
+// {
+//     "pathname": "/products",
+//     "search": "?name=hoodie&color=orange&maxPrice=500",
+//     "hash": "#agreeement",
+//     "state": null,
+//     "key": "random-browser-gen-id"
+// }
+
+// import {useEffect} from 'react';
+// import {useLocation} from 'react-router-dom';
+// import  Analitycs from 'to/analitycs-service';
+
+// const App = () => {
+
+// const location = useLocation();
+
+// useEffect(() => {Analitycs.send(location)}, [location]);
+
+// return <div>...</div>
+// }
+
+// import { useLocation } from "react-router-dom";
+
+// // const Products = () => {
+
+// //     const location = useLocation();
+// // return <Link to={location.state.from}>
+// // Product-1</Link>
+// // }
+
+// const Products = () => {
+//   const location = useLocation();
+//   return <Link state={{from:location}} to="/products/hoodie-1">Product-1</Link>;
+// };
+
+
+import {lazy, Suspense} from 'react';
+const Component = lazy(() => import('path/Component'));
+
+const App =() => {
+return (
+    <Suspense>
+        <Rotes>
+            <Route/>
+        </Rotes>
+    </Suspense>
+    )
+}
