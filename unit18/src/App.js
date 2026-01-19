@@ -295,15 +295,26 @@
 // };
 
 
-import {lazy, Suspense} from 'react';
-const Component = lazy(() => import('path/Component'));
+// import {lazy, Suspense} from 'react';
+// const Component = lazy(() => import('path/Component'));
 
-const App =() => {
-return (
-    <Suspense>
-        <Rotes>
-            <Route/>
-        </Rotes>
-    </Suspense>
-    )
-}
+// const App =() => {
+// return (
+//     <Suspense>
+//         <Rotes>
+//             <Route/>
+//         </Rotes>
+//     </Suspense>
+//     )
+// }
+
+
+
+
+
+
+
+
+
+
+createStore()
