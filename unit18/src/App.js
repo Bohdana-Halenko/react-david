@@ -317,4 +317,70 @@
 
 
 
-createStore()
+// createStore()
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const selectTotalValues = state => {
+//     const a = state.values.a; //5
+//     const b = state.values.b; //10
+//     return a + b;
+// }
+
+// const valueSelector = state => state.some.value;
+
+
+// export const selectTaskCount = state => {
+// const tasks = selectTasks(state);
+// console.log("calculation task count");
+
+// return tasks.reduce(
+//     (count, task) => {
+//         if(task.complated){
+//         count.complated += 1;
+//     } else {
+//         count.active +=1
+//     }
+//     return count;
+//     }, {active: 0, complated: 0}
+//     )
+// }
+
+
+
+// import {createSelector} from "@reduxjs/toolkit";
+
+// const selector = createSelector(
+//         [inputSelector1, inputSelector2, inputSelector3],
+//         (result1, result2, result3) => {
+//         }
+//     )
+
+
+
+import { createSelector } from "@reduxjs/toolkit";
+// Решта селекторів
+export const selectTaskCount = createSelector([selectTasks], tasks => {
+ console.log("Calculating task count. Now memoized!");
+ return tasks.reduce(
+   (count, task) => {
+     if (task.completed) {
+       count.completed += 1;
+     } else {
+       count.active += 1;
+     }
+     return count;
+   },
+   { active: 0, completed: 0 }
+ );
+});
